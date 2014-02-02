@@ -8,6 +8,7 @@ env:
   - LOGS_DIR: /tmp/sauce-build/logs
   - BROWSER_PROVIDER_READY_FILE: /tmp/sauce-connect-ready
 before_script:
+- mkdir -p $LOGS_DIR
 - ./misc/sauce/sauce_connect_setup.sh
 - npm install -g bower grunt-cli
 - bower install
